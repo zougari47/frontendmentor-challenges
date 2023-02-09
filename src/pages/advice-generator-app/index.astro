@@ -1,0 +1,48 @@
+---
+import Advice from '../../components/advice-generator-app/Advice'
+import Layout from '../../layouts/Layout.astro'
+---
+
+<Layout title='Advice Genrator'>
+  <Advice client:load />
+</Layout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+  :root {
+    /* primary */
+    --light-cyan: 193 38% 86%;
+    --neon-green: 150 100% 66%;
+    /* neutral */
+    --grayish-blue: 217 19% 24%;
+    --dark-grayish-blue: 217 19% 24%;
+    --dark-blue: 218 23% 16%;
+  }
+
+  body {
+    background-color: hsl(var(--dark-blue));
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+</style>
