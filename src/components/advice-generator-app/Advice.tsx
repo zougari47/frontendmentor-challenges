@@ -29,19 +29,18 @@ export default function Advice() {
           <small className='mb-6 block font-extrabold uppercase tracking-[0.25em] text-[hsl(var(--neon-green))]'>
             advice #{advice?.slip?.id}
           </small>
-          <h1>
-            <blockquote
-              key={advice?.slip?.id}
-              className='mb-[26px] animate-[text-focus-in_0.65s_ease-in-out] text-[28px] font-extrabold leading-[38px] text-[hsl(var(--light-cyan))] before:content-["“"] after:content-["”"] lg:mb-10'
-            >
-              {advice?.slip?.advice}
-            </blockquote>
-          </h1>
+          <blockquote
+            key={advice?.slip?.id}
+            className='mb-[26px] animate-[text-focus-in_0.65s_ease-in-out] text-[28px] font-extrabold leading-[38px] text-[hsl(var(--light-cyan))] before:content-["“"] after:content-["”"] lg:mb-10'
+          >
+            <h1>{advice?.slip?.advice}</h1>
+          </blockquote>
         </>
       )}
 
       <img
         src='/advice-generator-app/pattern-divider-desktop.svg'
+        sizes='(min-width: 768px) 786px, 500px'
         srcSet='/advice-generator-app/pattern-divider-mobile.svg 500w, /advice-generator-app/pattern-divider-mobile.svg 786w'
         alt='pattern divider'
         className='h-auto w-full'
