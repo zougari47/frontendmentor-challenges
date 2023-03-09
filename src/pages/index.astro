@@ -3,9 +3,51 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Frontend Mentor Solutions By Ahmed Zougari'>
-  <div>
-    <ul class='mt-20 list-disc'>
-      <li class='text-center'>
+  <div class='container'>
+    <h1 class='mt-10 text-center text-3xl'>
+      <a
+        target='_blank'
+        href='https://frontendmentor.io'
+        class='group relative'
+      >
+        <span
+          class='relative bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent'
+          >FrontendMentor</span
+        >
+        <div
+          class='absolute top-12 left-0 hidden w-[min(90vw,400px)] rounded-md bg-slate-100 p-4 text-left text-base opacity-0 shadow transition-opacity duration-700 before:absolute before:top-0 before:left-[4px] before:-mt-4 before:border-8 before:border-slate-100 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:content-[""] group-hover:block group-hover:opacity-100'
+        >
+          <p class='mb-4'>
+            Frontend Mentor is a platform that provides web development
+            challenges to help frontend developers improve their skills by
+            building realistic projects. The challenges are designed to be
+            suitable for developers at all skill levels, from beginners to
+            advanced developers, and cover a range of topics including HTML,
+            CSS, and JavaScript.
+          </p><p>
+            Frontend Mentor provides design files and assets for each challenge,
+            and developers are encouraged to use their creativity and
+            problem-solving skills to implement the designs as accurately as
+            possible. The platform also provides solutions and feedback on each
+            challenge, allowing developers to learn from their mistakes and
+            improve their skills over time.
+          </p>
+        </div></a
+      >
+      <span>
+        <span>Solutions By</span>
+        <a
+          href='https://ahmedzougari.com'
+          target='_blank'
+          class='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent'
+        >
+          Ahmed Zougari</a
+        >
+      </span>
+    </h1>
+
+    <ul class='mt-10'>
+      <li class='text-center before:content-["•"]'>
         <a href='/advice-generator-app' class='hover:underline'
           >advice generator</a
         >

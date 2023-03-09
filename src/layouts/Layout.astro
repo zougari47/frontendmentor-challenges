@@ -19,12 +19,11 @@ const { title } = Astro.props
     <slot />
   </body>
   <script>
-    // var currentURL = window.location.href
-    // if (currentURL.includes('vercel')) {
-    //   window.location.href = currentURL.replace(
-    //     'frontendmentor-challenges-zougari.vercel.app',
-    //     'artisanale.ma'
-    //   )
-    // }
+    const currentHostName = window.location.hostname
+    const currentRoute = window.location.pathname
+    const customDomaineName = 'artisanale.ma'
+
+    if (!currentHostName.includes(customDomaineName))
+      window.location.href = 'https://' + customDomaineName + currentRoute
   </script>
 </html>

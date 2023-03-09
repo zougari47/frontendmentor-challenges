@@ -31,9 +31,11 @@ export default function Advice() {
           </small>
           <blockquote
             key={advice?.slip?.id}
-            className='mb-[26px] animate-[text-focus-in_0.65s_ease-in-out] text-[28px] font-extrabold leading-[38px] text-[hsl(var(--light-cyan))] before:content-["“"] after:content-["”"] lg:mb-10'
+            className='mb-[26px] animate-[text-focus-in_0.65s_ease-in-out] text-[28px] font-extrabold leading-[38px] text-[hsl(var(--light-cyan))] lg:mb-10'
           >
-            <h1>{advice?.slip?.advice}</h1>
+            <h1 className='before:content-["“"] after:content-["”"]'>
+              {advice?.slip?.advice}
+            </h1>
           </blockquote>
         </>
       )}
