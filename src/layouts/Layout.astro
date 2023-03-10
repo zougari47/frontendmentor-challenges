@@ -23,6 +23,8 @@ const { title } = Astro.props
     const currentRoute = window.location.pathname
     const customDomaineName = 'artisanale.ma'
 
+    console.log(import.meta.env.DEV)
+
     if (!currentHostName.includes(customDomaineName))
       window.location.href = 'https://' + customDomaineName + currentRoute
   </script>
