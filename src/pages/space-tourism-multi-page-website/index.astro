@@ -1,20 +1,48 @@
 ---
 import Layout from '../../layouts/space-tourism-multi-page-website.astro'
+const p = 'space-tourism-multi-page-website'
 ---
 
 <Layout>
-  <h1 class='text-center text-4xl text-white'>hello space</h1>
+  <main class='container mt-12 text-center text-xl text-white'>
+    <section>
+      <h1 class='leading-[19px] tracking-[2.7px] text-[hsl(var(--light))]'>
+        SO, YOU WANT TO TRAVEL TO
+        <span
+          class='my-4 block font-["Bellefair"] text-8xl text-[hsl(var(--white))]'
+          >SPACE</span
+        >
+      </h1>
+      <p class='mb-20 text-[hsl(var(--light))]'>
+        Let’s face it; if you want to go to space, you might as well genuinely
+        go to outer space and not hover kind of on the edge of it. Well sit
+        back, and relax because we’ll give you a truly out of this world
+        experience!
+      </p>
+      <a
+        class='relative mx-auto flex aspect-square w-[150px] items-center justify-center rounded-full bg-white font-["Bellefair"] text-3xl text-[hsl(var(--dark))] before:absolute before:-z-[1] before:h-full before:w-full before:rounded-full before:bg-[hsl(var(--white)/0.1)] before:duration-300 before:content-[""] hover:before:scale-[175%]'
+        href={`/${p}/destination`}>EXPLORE</a
+      >
+    </section>
+  </main>
 </Layout>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Barlow&family=Bellefair&display=swap');
 
+  :root {
+    --dark: 230 35% 7%;
+    --light: 231 77% 90%;
+    --white: 0 0% 100%;
+  }
+
   body {
-    background-image: url('./space-tourism-multi-page-website/home/background-home-desktop.jpg');
+    background-image: url('./space-tourism-multi-page-website/home/background-home-mobile.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 90vh;
-    /* TODO change bg on breakpoint */
+    min-height: 100vh;
+    overflow-y: hidden;
+    /* TODO change bg image on breakpoint / also the min height ?? */
   }
 </style>

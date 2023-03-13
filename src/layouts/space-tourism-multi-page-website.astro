@@ -4,6 +4,15 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title='Space tourism multi-page website'>
-  <Header />
-  <slot />
+  <div class='text-xl'>
+    <Header client:load />
+    <slot />
+  </div>
 </Layout>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+  body {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+</style>

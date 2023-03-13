@@ -19,13 +19,13 @@ const { title } = Astro.props
     <slot />
   </body>
   <script>
-    const currentHostName = window.location.hostname
-    const currentRoute = window.location.pathname
-    const customDomaineName = 'artisanale.ma'
+    if (!import.meta.env.DEV) {
+      const currentHostName = window.location.hostname
+      const currentRoute = window.location.pathname
+      const customDomaineName = 'artisanale.ma'
 
-    console.log(import.meta.env.DEV)
-
-    if (!currentHostName.includes(customDomaineName))
-      window.location.href = 'https://' + customDomaineName + currentRoute
+      if (!currentHostName.includes(customDomaineName))
+        window.location.href = 'https://' + customDomaineName + currentRoute
+    }
   </script>
 </html>
