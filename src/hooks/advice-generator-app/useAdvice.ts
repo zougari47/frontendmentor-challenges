@@ -7,7 +7,7 @@ interface IAdvice {
 
 const useAdvice = () => {
   const [advice, setAdvice] = useState<IAdvice | null>(null)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   const getNewAdvice = () => {
